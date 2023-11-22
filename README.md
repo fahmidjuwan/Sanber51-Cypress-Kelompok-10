@@ -1,7 +1,7 @@
 # Sanber51-Cypress-Kelompok-10
 Nama Anggota :
 1. Muhammad Fahmi
-2. Djuantono
+2. Djuwantono
 3. Mentari Dewi Sartika
 4. Manginar Napitupulu
 5. Kholisah Lustinasari
