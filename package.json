@@ -1,12 +1,11 @@
 {
-  "dependencies": {
-    "cypress": "^13.5.1"
-  },
   "name": "kelompok-10",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
