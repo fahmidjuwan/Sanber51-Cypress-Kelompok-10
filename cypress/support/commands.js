@@ -12,7 +12,17 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
-//
+Cypress.Commands.add('login', (email, password) => {
+    cy.get('#email').type(email)
+    cy.get('#pass').type(password)
+    cy.get('#send2').click()
+})
+
+Cypress.Commands.add('verifyContain', (locator, value) => {
+    cy.get(locator, {timeout: 30000}).should('contain',value)
+
+})
+
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
