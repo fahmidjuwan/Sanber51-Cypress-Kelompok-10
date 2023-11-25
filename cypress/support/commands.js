@@ -11,7 +11,9 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+
+
+// commands.js untuk login_Yuyun
 Cypress.Commands.add('login', (email, password) => {
     cy.get('#email').type(email)
     cy.get('#pass').type(password)
