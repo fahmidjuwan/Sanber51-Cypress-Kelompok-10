@@ -54,6 +54,9 @@ describe('template spec', () => {
     cy.get(':nth-child(1) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo').click()
     cy.get('#product-addtocart-button').click()
     cy.wait(2000); 
+    cy.get('[id="super_attribute[143]-error"]').should('contain','This is a required field.')
+    cy.get('[id="super_attribute[93]-error"]').should('contain','This is a required field.')
+    cy.wait(2000); 
   })
 
   it('Failed Choose Product Men Bottom Because dont choose color & size', () => {
@@ -70,6 +73,9 @@ describe('template spec', () => {
     cy.get(':nth-child(4) > :nth-child(5) > a').click()
     cy.get(':nth-child(2) > .product-item-info > .photo > .product-image-container > .product-image-wrapper > .product-image-photo').click()
     cy.get('#product-addtocart-button').click()
+    cy.wait(2000); 
+    cy.get('[id="super_attribute[143]-error"]').should('contain','This is a required field.')
+    cy.get('[id="super_attribute[93]-error"]').should('contain','This is a required field.')
     cy.wait(2000); 
   })
 })
