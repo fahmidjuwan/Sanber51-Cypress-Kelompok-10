@@ -15,7 +15,7 @@ describe('Create an Account', () => {
   let firstName = randomName()
 
   beforeEach(() => {
-    cy.visit('')
+    cy.visit('/')
   })
   
   it('Create account success', () => {
@@ -38,6 +38,6 @@ describe('Create an Account', () => {
     cy.get('#password').type('Mentarisar123')
     cy.get('#password-confirmation').type('Mentarisar123')
     cy.get('.action.submit.primary').click()
-    cy.contains('here is already an account with this email address.').should('be.visible')
+    cy.contains('There is already an account with this email address.').should('be.visible')
   })
 })
