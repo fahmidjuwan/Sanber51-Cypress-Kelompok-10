@@ -43,9 +43,11 @@ describe('view cart', () => {
     cy.get('#product-addtocart-button').click()
     cy.get('.showcart').click()
     cy.get(':nth-child(7) > .secondary > .action > span').click()
-    // cy.get('#cart-483688-qty').click()
-    cy.get('.item-qty.cart-item-qty').type(4)
-    cy.get('.update > span').click()
+    cy.get('.action-edit').click()
+    cy.get('#option-label-size-143-item-178').click()
+    cy.get('#option-label-color-93-item-50').click()
+    cy.get('#qty').type(1)
+    cy.get('#product-updatecart-button').click()
     cy.wait(2000);
   })
     it('Success delete cart with login and Choose Product Men Bottom', () => {
