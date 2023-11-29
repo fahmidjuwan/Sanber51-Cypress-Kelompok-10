@@ -4,7 +4,7 @@ describe('template spec', () => {
     cy.contains('Sign In').click()
     cy.url().should('include','customer/account/login/referer')
     cy.get('#email').type('fahmidjuwan@mail.com')
-    cy.get('[title="Password"]').type('Djuwan@111')
+    cy.get('[title="Password"]').type(Cypress.env('password'))
     cy.wait(2000); 
     cy.get('[class="action login primary"]').click()
     cy.url().should('include','magento.softwaretestingboard.com')
@@ -24,7 +24,7 @@ describe('template spec', () => {
     cy.contains('Sign In').click()
     cy.url().should('include','customer/account/login/referer')
     cy.get('#email').type('fahmidjuwan@mail.com')
-    cy.get('[title="Password"]').type('Djuwan@111')
+    cy.get('[title="Password"]').type(Cypress.env('password'))
     cy.wait(2000); 
     cy.get('[class="action login primary"]').click()
     cy.url().should('include','magento.softwaretestingboard.com')
@@ -44,7 +44,7 @@ describe('template spec', () => {
     cy.contains('Sign In').click()
     cy.url().should('include','customer/account/login/referer')
     cy.get('#email').type('fahmidjuwan@mail.com')
-    cy.get('[title="Password"]').type('Djuwan@111')
+    cy.get('[title="Password"]').type(Cypress.env('password'))
     cy.wait(2000); 
     cy.get('[class="action login primary"]').click()
     cy.url().should('include','magento.softwaretestingboard.com')
@@ -64,7 +64,7 @@ describe('template spec', () => {
     cy.contains('Sign In').click()
     cy.url().should('include','customer/account/login/referer')
     cy.get('#email').type('fahmidjuwan@mail.com')
-    cy.get('[title="Password"]').type('Djuwan@111')
+    cy.get('[title="Password"]').type(Cypress.env('password'))
     cy.wait(2000); 
     cy.get('[class="action login primary"]').click()
     cy.url().should('include','magento.softwaretestingboard.com')
