@@ -1,0 +1,6 @@
+{
+    "valid_email": "fahmidjuwan@mail.com",
+    "invalid_email": "fahmidjuwan123@mail.com",
+    "valid_pass": "Djuwan@111",
+    "invalid_pass": "Djuwan@123"
+}

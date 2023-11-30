@@ -1,10 +1,13 @@
+import LoginPage from '../../support/pageObject/loginpage'
+const userdata = require('../../fixtures/userdata.json')
+
 describe('template spec', () => {
   it('Success Choose Product Women Tops', () => {
     cy.visit('https://magento.softwaretestingboard.com')
     cy.contains('Sign In').click()
     cy.url().should('include','customer/account/login/referer')
-    cy.get('#email').type('fahmidjuwan@mail.com')
-    cy.get('[title="Password"]').type(Cypress.env('password'))
+    cy.get(LoginPage.email).type(userdata.valid_email)
+    cy.get(LoginPage.password).type(userdata.valid_pass)
     cy.wait(2000); 
     cy.get('[class="action login primary"]').click()
     cy.url().should('include','magento.softwaretestingboard.com')
@@ -76,6 +79,16 @@ describe('template spec', () => {
     cy.wait(2000); 
     cy.get('[id="super_attribute[143]-error"]').should('contain','This is a required field.')
     cy.get('[id="super_attribute[93]-error"]').should('contain','This is a required field.')
+    cy.wait(2000); 
+  })
+
+  it('Failed Login Custom Command', () => {
+    cy.visit('https://magento.softwaretestingboard.com')
+    cy.contains('Sign In').click()
+    cy.url().should('include','customer/account/login/referer')
+    cy.login('fahmidjuwan@mail.com', '123')
+    cy.wait(2000); 
+    cy.get('[data-ui-id="message-error"]').should('contain','The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
     cy.wait(2000); 
   })
 })

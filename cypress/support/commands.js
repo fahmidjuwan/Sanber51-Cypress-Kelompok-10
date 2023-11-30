@@ -16,12 +16,12 @@
 // commands.js untuk login_Yuyun
 Cypress.Commands.add('login', (email, password) => {
     cy.get('#email').type(email)
-    cy.get('#pass').type(password)
-    cy.get('#send2').click()
+    cy.get('[title="Password"]').type(password)
+    cy.get('[class="action login primary"]').click()
 })
 
 Cypress.Commands.add('verifyContain', (locator, value) => {
-    cy.get(locator, {timeout: 30000}).should('contain',value)
+    cy.get(locator,).should('contain',value)
 
 })
 

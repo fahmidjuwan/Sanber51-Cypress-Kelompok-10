@@ -1,0 +1,13 @@
+name: Magento Login
+on: push
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress run Magento Chrome
+        uses: cypress-io/github-actionv@6
+        with:
+          browser: chrome
+          spec: cypress\e2e\3-Web\ChooseProduct.cy.js
