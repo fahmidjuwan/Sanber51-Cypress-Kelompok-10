@@ -9,6 +9,7 @@ describe('Verify Magento Login Functionality', () => {
     cy.get('#send2').click()
   })
 })
+
 it('success login - CUSTOM COMMAND', () => {
   cy.visit('https://magento.softwaretestingboard.com/customer/account/login')
   cy.login(loginData.valid_email,loginData.valid_password)

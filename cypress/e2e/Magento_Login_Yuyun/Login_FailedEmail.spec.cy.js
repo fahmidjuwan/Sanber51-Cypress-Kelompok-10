@@ -15,4 +15,5 @@ it('failed Email login - CUSTOM COMMAND', () => {
   cy.login(loginData.invalid_email,loginData.valid_password)
   cy.verifyContain('.message-error > div','The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.')
   })
+  
 })
